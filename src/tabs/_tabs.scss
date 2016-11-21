@@ -1,0 +1,42 @@
+.tabs-content {
+  margin-bottom: $global-margin;
+}
+.uib-tabset.vertical {
+  margin-bottom: $global-margin;
+  .tabs-content {
+    margin-bottom: 0;
+  }
+}
+
+.tabs-title.is-disabled a {
+  color: $dark-gray;
+  cursor: default;
+  &:focus,
+  &:hover,
+  &:active {
+    outline: none;
+  }
+}
+
+// Vertical Tabs
+.uib-tabset.vertical {
+  display: flex;
+  width: 100%;
+  max-width: 100%;
+  ul.tabs.vertical {
+    flex: 0 0 auto;
+  }
+  .tabs-content.vertical {
+    flex: 1;
+  }
+}
+
+// Justified Tabs
+.uib-tabset.justified {
+  ul.tabs li {
+    display: table-cell;
+    width: 1%;
+    float: none;
+    text-align: center;
+  }
+}

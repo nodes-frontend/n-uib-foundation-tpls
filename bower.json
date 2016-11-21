@@ -1,0 +1,17 @@
+{
+  "name": "n-uib-foundation-tpls",
+  "main": "n-uib-foundation-tpls.js",
+  "homepage": "https://github.com/dennishn/n-uib-foundatoin-tpls",
+  "authors": [
+    "Dennis Haulund Nielsen <dhni@nodes.dk>"
+  ],
+  "description": "Use Foundation Sites styling and markup with Angular-UI's brilliant Bootstrap implementation. This package simply overwrites the templates and adds some styling",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

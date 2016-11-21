@@ -1,0 +1,34 @@
+[uib-dropdown] {
+  position: relative;
+  ul {
+    margin-bottom: 0;
+  }
+}
+[uib-dropdown].open [uib-dropdown-menu] {
+  display: block;
+  z-index: 1;
+}
+[uib-dropdown-menu] {
+  display: none;
+  position: absolute;
+
+  min-width: $dropdownmenu-min-width;
+
+  visibility: visible;
+
+  background: $dropdownmenu-background;
+  border: $dropdownmenu-border;
+
+  &.top {
+    bottom: 100%;
+  }
+  &.right {
+    right: 0;
+  }
+  &.bottom {
+    top: 100%;
+  }
+  &.left {
+    left: 0;
+  }
+}

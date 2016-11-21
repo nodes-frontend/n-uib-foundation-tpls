@@ -1,0 +1,44 @@
+[uib-datepicker] {
+
+	table thead th, table thead td,
+	table tfoot th, table tfoot td,
+	table tbody th, table tbody td {
+		padding: rem-calc(4 2);
+	}
+
+	button,
+	.button {
+		@include button(
+			$background: $secondary-color,
+			$style: 'hollow'
+		);
+		margin-bottom: 0;
+		font-size: 0.75rem;
+	}
+
+	button.active,
+	.button.active {
+		@include button-hollow-style($color: $primary-color);
+	}
+
+	button.selected,
+	.button.selected {
+		@include button-style($background: $primary-color);
+	}
+
+	.text-muted {
+		color: lighten($secondary-color, 35%);
+	}
+
+	.uib-weeks td {
+		font-size: rem-calc(12);
+
+	}
+
+}
+[uib-datepicker],
+[uib-daypicker] {
+	&:focus {
+		outline: none;
+	}
+}

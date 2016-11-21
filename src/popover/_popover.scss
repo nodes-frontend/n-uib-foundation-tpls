@@ -1,0 +1,15 @@
+[uib-popover-popup],
+[uib-popover-html-popup],
+[uib-popover-template-popup] {
+	@include dropdown-container;
+	visibility: visible;
+}
+
+// Mimic the default animation of the Bootstrap Modal.
+.popover {
+	transition: opacity .3s ease-out;
+	opacity: 0;
+}
+.popover.in {
+	opacity: 1;
+}

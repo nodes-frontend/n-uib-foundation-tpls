@@ -1,0 +1,123 @@
+<table class="uib-timepicker">
+    <tbody>
+        <tr class="text-center" ng-show="::showSpinners">
+            <td class="uib-increment hours">
+                <button ng-click="incrementHours()"
+                   ng-class="{disabled: noIncrementHours()}"
+                   class="button small secondary hollow expanded"
+                   ng-disabled="noIncrementHours()"
+                   tabindex="-1">
+                    <i class="material-icons">keyboard_arrow_up</i>
+                </button>
+            </td>
+            <td>&nbsp;</td>
+            <td class="uib-increment minutes">
+                <button ng-click="incrementMinutes()"
+                   ng-class="{disabled: noIncrementMinutes()}"
+                   class="button small secondary hollow expanded"
+                   ng-disabled="noIncrementMinutes()"
+                   tabindex="-1">
+                    <i class="material-icons">keyboard_arrow_up</i>
+                </button>
+            </td>
+            <td ng-show="showSeconds">&nbsp;</td>
+            <td ng-show="showSeconds" class="uib-increment seconds">
+                <button ng-click="incrementSeconds()"
+                   ng-class="{disabled: noIncrementSeconds()}"
+                   class="button small secondary hollow expanded"
+                   ng-disabled="noIncrementSeconds()"
+                   tabindex="-1">
+                    <i class="material-icons">keyboard_arrow_up</i>
+                </button>
+            </td>
+            <td ng-show="showMeridian"></td>
+        </tr>
+        
+        <tr>
+            <td class="form-group uib-time hours">
+                <input type="text"
+                       placeholder="HH"
+                       ng-model="hours"
+                       ng-change="updateHours()"
+                       class="text-center"
+                       ng-class="{'is-invalid-input': invalidHours}"
+                       ng-readonly="::readonlyInput"
+                       maxlength="2"
+                       tabindex="{{::tabindex}}"
+                       ng-disabled="noIncrementHours()"
+                       ng-blur="blur()">
+            </td>
+            <td class="uib-separator">:</td>
+            <td class="form-group uib-time minutes">
+                <input type="text"
+                       placeholder="MM"
+                       ng-model="minutes"
+                       ng-change="updateMinutes()"
+                       class="text-center"
+                       ng-class="{'is-invalid-input': invalidMinutes}"
+                       ng-readonly="::readonlyInput"
+                       maxlength="2"
+                       tabindex="{{::tabindex}}"
+                       ng-disabled="noIncrementMinutes()"
+                       ng-blur="blur()">
+            </td>
+            <td ng-show="showSeconds" class="uib-separator">:</td>
+            <td class="form-group uib-time seconds" ng-show="showSeconds">
+                <input type="text"
+                       placeholder="SS"
+                       ng-model="seconds"
+                       ng-change="updateSeconds()"
+                       class="text-center"
+                       ng-class="{'is-invalid-input': invalidSeconds}"
+                       ng-readonly="readonlyInput"
+                       maxlength="2"
+                       tabindex="{{::tabindex}}"
+                       ng-disabled="noIncrementSeconds()"
+                       ng-blur="blur()">
+            </td>
+            <td ng-show="showMeridian" class="uib-time am-pm">
+                <button type="button"
+                        ng-class="{disabled: noToggleMeridian()}"
+                        class="button small secondary hollow"
+                        ng-click="toggleMeridian()"
+                        ng-disabled="noToggleMeridian()"
+                        tabindex="{{::tabindex}}">
+                    {{meridian}}
+                </button>
+            </td>
+        </tr>
+        
+        <tr class="text-center" ng-show="::showSpinners">
+            <td class="uib-decrement hours">
+                <button ng-click="decrementHours()"
+                   ng-class="{disabled: noDecrementHours()}"
+                   class="button small secondary hollow expanded"
+                   ng-disabled="noDecrementHours()"
+                   tabindex="-1">
+                    <i class="material-icons">keyboard_arrow_down</i>
+                </button>
+            </td>
+            <td>&nbsp;</td>
+            <td class="uib-decrement minutes">
+                <button ng-click="decrementMinutes()"
+                   ng-class="{disabled: noDecrementMinutes()}"
+                   class="button small secondary hollow expanded"
+                   ng-disabled="noDecrementMinutes()"
+                   tabindex="-1">
+                    <i class="material-icons">keyboard_arrow_down</i>
+                </button>
+            </td>
+            <td ng-show="showSeconds">&nbsp;</td>
+            <td ng-show="showSeconds" class="uib-decrement seconds">
+                <button ng-click="decrementSeconds()"
+                   ng-class="{disabled: noDecrementSeconds()}"
+                   class="button small secondary hollow expanded"
+                   ng-disabled="noDecrementSeconds()"
+                   tabindex="-1">
+                    <i class="material-icons">keyboard_arrow_down</i>
+                </button>
+            </td>
+            <td ng-show="showMeridian"></td>
+        </tr>
+    </tbody>
+</table>

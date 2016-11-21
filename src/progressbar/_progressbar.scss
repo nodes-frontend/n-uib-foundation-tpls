@@ -1,0 +1,29 @@
+.progress {
+  overflow: hidden;
+}
+
+.progress-meter {
+  float: left;
+}
+
+// Mimic transition from Bootstrap
+.progress-meter {
+  transition: width .6s ease;
+}
+
+// Bars can also be colored
+.progress-meter {
+  background-color: $primary-color;
+  &.secondary {
+    background-color: $secondary-color;
+  }
+  &.success {
+    background-color: $success-color;
+  }
+  &.warning {
+    background-color: $warning-color;
+  }
+  &.alert {
+    background-color: $alert-color;
+  }
+}

@@ -1,0 +1,36 @@
+<div role="presentation"
+    class="uib-datepicker-popup uib-position-measure"
+    dropdown-nested
+    ng-if="isOpen"
+    ng-keydown="keydown($event)"
+    ng-click="$event.stopPropagation()">
+    
+    <div ng-transclude></div>
+    
+    <div ng-if="showButtonBar"
+        class="uib-button-bar clearfix">
+        
+        <div class="float-left">
+          
+            <button type="button"
+                  class="button hollow small uib-datepicker-current"
+                  ng-click="select('today', $event)"
+                  ng-disabled="isDisabled('today')">
+              {{ getText('current') }}
+          </button>
+          
+            <button type="button"
+                  class="button alert small hollow uib-clear"
+                  ng-click="select(null, $event)">
+              {{ getText('clear') }}
+          </button>
+            
+        </div>
+        
+        <button type="button"
+                class="button secondary hollow small float-right uib-close"
+                ng-click="close($event)">
+            {{ getText('close') }}
+        </button>
+    </div>
+</div>

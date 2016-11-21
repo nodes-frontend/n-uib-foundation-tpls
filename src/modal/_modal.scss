@@ -1,0 +1,43 @@
+// Overwrites and implementations of the Foundation Reveal CSS, based on the Bootstrap markup.
+body.modal-open {
+  min-height: 100%;
+  overflow: hidden;
+  user-select: none;
+}
+.modal {
+  @include reveal-overlay(transparent);
+  outline: none;
+  .reveal {
+    display: block;
+  }
+}
+.modal-backdrop {
+  @include reveal-overlay();
+  display: block;
+  overflow: hidden;
+}
+
+// Mimic the default animation of the Bootstrap Modal.
+.modal[modal-animation="true"] {
+  transition: opacity .3s ease-out;
+  opacity: 0;
+  will-change: opacity, transform;
+  .reveal {
+    transition: transform .3s ease-out;
+    transform: translate3d(0, -25%, 0);
+  }
+}
+.modal[modal-animation="true"].in {
+  opacity: 1;
+  .reveal {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.modal-backdrop[modal-animation="true"] {
+  transition: opacity .15s linear;
+  opacity: 0;
+}
+.modal-backdrop[modal-animation="true"].in {
+  opacity: 1;
+}

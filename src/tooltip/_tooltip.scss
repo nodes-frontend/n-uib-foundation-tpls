@@ -1,0 +1,93 @@
+// Move the pseudo arrows to the after position
+.tooltip.top,
+.tooltip.top-left,
+.tooltip.top-right {
+  &:before {
+    display: none;
+  }
+  &:after {
+    @include css-triangle($tooltip-pip-width, $tooltip-background-color, down);
+  }
+}
+
+.tooltip.bottom,
+.tooltip.bottom-left,
+.tooltip.bottom-right {
+  &:before {
+    @include css-triangle($tooltip-pip-width, $tooltip-background-color, up);
+    position: static;
+    left: auto;
+    transform: none;
+  }
+}
+
+.tooltip.left,
+.tooltip.left-top,
+.tooltip.left-bottom {
+  &:before {
+    @include css-triangle($tooltip-pip-width, $tooltip-background-color, right);
+    float: right;
+    position: static;
+    left: auto;
+    transform: translateY(50%);
+    margin-top: -4px;
+  }
+  .tooltip-inner {
+    float: left;
+  }
+}
+
+.tooltip.right,
+.tooltip.right-top,
+.tooltip.right-bottom {
+  &:before {
+    @include css-triangle($tooltip-pip-width, $tooltip-background-color, left);
+    float: left;
+    position: static;
+    left: auto;
+    transform: translateY(50%);
+    margin-top: -4px;
+  }
+  .tooltip-inner {
+    float: right;
+  }
+}
+
+// Placement of tooltips and arrows on vertical tipstools
+.tooltip {
+  &.top:after {
+    margin-right: auto;
+    margin-left: auto;
+  }
+  &.top-left:after {
+    margin-left: 5px;
+  }
+  &.top-right:after {
+    margin-right: 5px;
+  }
+  &.bottom:before {
+    margin-right: auto;
+    margin-left: auto;
+  }
+  &.bottom-left:before {
+    margin-left: 5px;
+  }
+  &.bottom-right:before {
+    margin-right: 5px;
+  }
+}
+
+// tooltip-inner is the actual content and styled representation of the tooltip
+.tooltip-inner {
+  @include tooltip;
+  position: relative;
+  font-size: 100%;
+  &:before {
+    display: none;
+  }
+}
+
+.tooltip {
+  padding: 0;
+  background-color: transparent;
+}

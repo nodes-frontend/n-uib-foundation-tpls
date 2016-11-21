@@ -1,0 +1,16 @@
+input[uib-typeahead] {
+	margin-bottom: 0;
+}
+[uib-typeahead-popup] {
+	@include dropdown-container;
+	visibility: visible;
+	width: auto;
+	min-width: $dropdown-width;
+	padding: 0;
+}
+.uib-typeahead-wrapper {
+	position: relative;
+	[uib-typeahead-popup] {
+		width: 100%;
+	}
+}

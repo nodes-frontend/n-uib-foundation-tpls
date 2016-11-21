@@ -1,0 +1,13 @@
+<div>
+    <ul class="tabs"
+        ng-class="{'vertical': vertical}"
+        ng-transclude>
+    </ul>
+    <div class="tabs-content" ng-class="{'vertical': vertical}">
+        <div class="tabs-panel"
+             ng-repeat="tab in tabset.tabs"
+             ng-class="{'is-active': tabset.active === tab.index}"
+             uib-tab-content-transclude="tab">
+        </div>
+    </div>
+</div>
