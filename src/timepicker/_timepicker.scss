@@ -1,10 +1,28 @@
 .uib-timepicker {
 	width: auto;
+
+	tbody tr:nth-child(even) {
+		background-color: transparent;
+	}
 }
 .uib-time input {
 	width: 50px;
 	margin-bottom: 0;
 }
+
+.uib-increment button,
+.uib-increment .button,
+.uib-decrement button,
+.uib-decrement .button {
+	padding: 4px;
+	.material-icons {
+		display: block;
+	}
+	svg {
+		vertical-align: middle;
+	}
+}
+
 .uib-increment button,
 .uib-increment .button,
 .uib-decrement button,
@@ -12,5 +30,4 @@
 .uib-time.am-pm button,
 .uib-time.am-pm .button {
 	margin-bottom: 0;
-
 }

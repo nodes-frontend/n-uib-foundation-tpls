@@ -16,6 +16,16 @@
 		font-size: 0.75rem;
 	}
 
+	.uib-datepicker__icon-button {
+		padding: 4px;
+		.material-icons {
+			display: block;
+		}
+		svg {
+			vertical-align: middle;
+		}
+	}
+
 	button.active,
 	.button.active {
 		@include button-hollow-style($color: $primary-color);
@@ -32,7 +42,9 @@
 
 	.uib-weeks td {
 		font-size: rem-calc(12);
-
+	}
+	.uib-weeks em {
+		padding: $button-padding;
 	}
 
 }

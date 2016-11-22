@@ -1,7 +1,7 @@
 angular.module('n.ui.foundation.tpls', []).run(['$templateCache', function($templateCache) {
   'use strict';
 
-  $templateCache.put('uib/template/src/accordion/accordion-group.html',
+  $templateCache.put('uib/template/accordion/accordion-group.html',
     "<div role=\"tab\" id=\"{{::headingId}}\" aria-selected=\"{{isOpen}}\" class=\"accordion-item\" ng-class=\"{'is-active': isOpen}\" ng-keypress=\"toggleOpen($event)\">\n" +
     "        <a role=\"button\" class=\"accordion-title\" data-toggle=\"collapse\" aria-expanded=\"{{isOpen}}\" aria-controls=\"{{::panelId}}\" tabindex=\"0\" class=\"accordion-toggle\" ng-click=\"toggleOpen()\" uib-accordion-transclude=\"heading\" ng-disabled=\"isDisabled\" uib-tabindex-toggle>\n" +
     "            <span uib-accordion-header ng-class=\"{'text-muted': isDisabled}\">\n" +
@@ -16,12 +16,12 @@ angular.module('n.ui.foundation.tpls', []).run(['$templateCache', function($temp
   );
 
 
-  $templateCache.put('uib/template/src/accordion/accordion.html',
+  $templateCache.put('uib/template/accordion/accordion.html',
     "<div role=\"tablist\" class=\"accordion\" ng-transclude></div>"
   );
 
 
-  $templateCache.put('uib/template/src/alert/alert.html',
+  $templateCache.put('uib/template/alert/alert.html',
     "<button class=\"close-button\" aria-label=\"Dismiss alert\" type=\"button\" ng-show=\"closeable\" ng-click=\"close({$event: $event})\">\n" +
     "    <span aria-hidden=\"true\">&times;</span>\n" +
     "</button>\n" +
@@ -29,7 +29,7 @@ angular.module('n.ui.foundation.tpls', []).run(['$templateCache', function($temp
   );
 
 
-  $templateCache.put('uib/template/src/datepicker/datepicker.html',
+  $templateCache.put('uib/template/datepicker/datepicker.html',
     "<div ng-switch=\"datepickerMode\">\n" +
     "    <div uib-daypicker ng-switch-when=\"day\" tabindex=\"0\" class=\"uib-daypicker\"></div>\n" +
     "    <div uib-monthpicker ng-switch-when=\"month\" tabindex=\"0\" class=\"uib-monthpicker\"></div>\n" +
@@ -38,13 +38,13 @@ angular.module('n.ui.foundation.tpls', []).run(['$templateCache', function($temp
   );
 
 
-  $templateCache.put('uib/template/src/datepicker/day.html',
+  $templateCache.put('uib/template/datepicker/day.html',
     "<table role=\"grid\" class=\"uib-datepicker\" aria-labelledby=\"{{::uniqueId}}-title\" aria-activedescendant=\"{{activeDateId}}\">\n" +
     "    <thead>\n" +
     "        <tr>\n" +
     "            <th>\n" +
-    "                <button type=\"button\" class=\"button expanded hollow\" ng-click=\"move(-1)\" tabindex=\"-1\">\n" +
-    "                    <i aria-hidden=\"true\" class=\"material-icons\">keyboard_arrow_left</i>\n" +
+    "                <button type=\"button\" class=\"button expanded hollow uib-datepicker__icon-button\" ng-click=\"move(-1)\" tabindex=\"-1\">\n" +
+    "                    <i class=\"material-icons\" ng-include=\"'node_modules/material-design-icons/hardware/svg/production/ic_keyboard_arrow_left_24px.svg'\"></i>\n" +
     "                    <span class=\"show-for-sr\">previous</span>\n" +
     "                </button>\n" +
     "            </th>\n" +
@@ -54,8 +54,8 @@ angular.module('n.ui.foundation.tpls', []).run(['$templateCache', function($temp
     "                </button>\n" +
     "            </th>\n" +
     "            <th>\n" +
-    "                <button type=\"button\" class=\"button expanded hollow\" ng-click=\"move(1)\" tabindex=\"-1\">\n" +
-    "                    <i aria-hidden=\"true\" class=\"material-icons\">keyboard_arrow_right</i>\n" +
+    "                <button type=\"button\" class=\"button expanded hollow uib-datepicker__icon-button\" ng-click=\"move(1)\" tabindex=\"-1\">\n" +
+    "                    <i class=\"material-icons\" ng-include=\"'node_modules/material-design-icons/hardware/svg/production/ic_keyboard_arrow_right_24px.svg'\"></i>\n" +
     "                    <span class=\"show-for-sr\">next</span>\n" +
     "                </button>\n" +
     "            </th>\n" +
@@ -85,13 +85,13 @@ angular.module('n.ui.foundation.tpls', []).run(['$templateCache', function($temp
   );
 
 
-  $templateCache.put('uib/template/src/datepicker/month.html',
+  $templateCache.put('uib/template/datepicker/month.html',
     "<table role=\"grid\" aria-labelledby=\"{{::uniqueId}}-title\" aria-activedescendant=\"{{activeDateId}}\">\n" +
     "    <thead>\n" +
     "        <tr>\n" +
     "            <th>\n" +
-    "                <button type=\"button\" class=\"button expanded hollow\" ng-click=\"move(-1)\" tabindex=\"-1\">\n" +
-    "                    <i aria-hidden=\"true\" class=\"material-icons\">keyboard_arrow_left</i>\n" +
+    "                <button type=\"button\" class=\"button expanded hollow uib-datepicker__icon-button\" ng-click=\"move(-1)\" tabindex=\"-1\">\n" +
+    "                    <i class=\"material-icons\" ng-include=\"'node_modules/material-design-icons/hardware/svg/production/ic_keyboard_arrow_left_24px.svg'\"></i>\n" +
     "                    <span class=\"show-for-sr\">previous</span>\n" +
     "                </button>\n" +
     "            </th>\n" +
@@ -101,8 +101,8 @@ angular.module('n.ui.foundation.tpls', []).run(['$templateCache', function($temp
     "                </button>\n" +
     "            </th>\n" +
     "            <th>\n" +
-    "                <button type=\"button\" class=\"button expanded hollow\" ng-click=\"move(1)\" tabindex=\"-1\">\n" +
-    "                    <i aria-hidden=\"true\" class=\"material-icons\">keyboard_arrow_right</i>\n" +
+    "                <button type=\"button\" class=\"button expanded hollow uib-datepicker__icon-button\" ng-click=\"move(1)\" tabindex=\"-1\">\n" +
+    "                    <i class=\"material-icons\" ng-include=\"'node_modules/material-design-icons/hardware/svg/production/ic_keyboard_arrow_right_24px.svg'\"></i>\n" +
     "                    <span class=\"show-for-sr\">next</span>\n" +
     "                </button>\n" +
     "            </th>\n" +
@@ -123,13 +123,13 @@ angular.module('n.ui.foundation.tpls', []).run(['$templateCache', function($temp
   );
 
 
-  $templateCache.put('uib/template/src/datepicker/year.html',
+  $templateCache.put('uib/template/datepicker/year.html',
     "<table role=\"grid\" aria-labelledby=\"{{::uniqueId}}-title\" aria-activedescendant=\"{{activeDateId}}\">\n" +
     "    <thead>\n" +
     "        <tr>\n" +
     "            <th>\n" +
-    "                <button type=\"button\" class=\"button expanded hollow\" ng-click=\"move(-1)\" tabindex=\"-1\">\n" +
-    "                    <i aria-hidden=\"true\" class=\"material-icons\">keyboard_arrow_left</i>\n" +
+    "                <button type=\"button\" class=\"button expanded hollow uib-datepicker__icon-button\" ng-click=\"move(-1)\" tabindex=\"-1\">\n" +
+    "                    <i class=\"material-icons\" ng-include=\"'node_modules/material-design-icons/hardware/svg/production/ic_keyboard_arrow_left_24px.svg'\"></i>\n" +
     "                    <span class=\"show-for-sr\">previous</span>\n" +
     "                </button>\n" +
     "            </th>\n" +
@@ -139,8 +139,8 @@ angular.module('n.ui.foundation.tpls', []).run(['$templateCache', function($temp
     "                </button>\n" +
     "            </th>\n" +
     "            <th>\n" +
-    "                <button type=\"button\" class=\"button expanded hollow\" ng-click=\"move(1)\" tabindex=\"-1\">\n" +
-    "                    <i aria-hidden=\"true\" class=\"material-icons\">keyboard_arrow_right</i>\n" +
+    "                <button type=\"button\" class=\"button expanded hollow uib-datepicker__icon-button\" ng-click=\"move(1)\" tabindex=\"-1\">\n" +
+    "                    <i class=\"material-icons\" ng-include=\"'node_modules/material-design-icons/hardware/svg/production/ic_keyboard_arrow_right_24px.svg'\"></i>\n" +
     "                    <span class=\"show-for-sr\">next</span>\n" +
     "                </button>\n" +
     "            </th>\n" +
@@ -159,7 +159,7 @@ angular.module('n.ui.foundation.tpls', []).run(['$templateCache', function($temp
   );
 
 
-  $templateCache.put('uib/template/src/datepickerPopup/popup.html',
+  $templateCache.put('uib/template/datepickerPopup/popup.html',
     "<div role=\"presentation\" class=\"uib-datepicker-popup uib-position-measure\" dropdown-nested ng-if=\"isOpen\" ng-keydown=\"keydown($event)\" ng-click=\"$event.stopPropagation()\">\n" +
     "    \n" +
     "    <div ng-transclude></div>\n" +
@@ -186,14 +186,14 @@ angular.module('n.ui.foundation.tpls', []).run(['$templateCache', function($temp
   );
 
 
-  $templateCache.put('uib/template/src/modal/window.html',
+  $templateCache.put('uib/template/modal/window.html',
     "<div class=\"reveal {{size ? size : ''}}\" uib-modal-transclude>\n" +
     "\n" +
     "</div>"
   );
 
 
-  $templateCache.put('uib/template/src/pager/pager.html',
+  $templateCache.put('uib/template/pager/pager.html',
     "<li class=\"pagination-previous\" ng-class=\"{'disabled':noPrevious()||ngDisabled}\">\n" +
     "    <a ng-click=\"selectPage(page - 1, $event)\" ng-disabled=\"noPrevious()||ngDisabled\" uib-tabindex-toggle>\n" +
     "        {{::getText('previous')}} <span class=\"show-for-sr\">page</span>\n" +
@@ -209,7 +209,7 @@ angular.module('n.ui.foundation.tpls', []).run(['$templateCache', function($temp
   );
 
 
-  $templateCache.put('uib/template/src/pagination/pagination.html',
+  $templateCache.put('uib/template/pagination/pagination.html',
     "<li ng-if=\"::boundaryLinks\" ng-class=\"{disabled: noPrevious()||ngDisabled}\" class=\"pagination-previous\">\n" +
     "    <a ng-click=\"selectPage(1, $event)\" ng-disabled=\"noPrevious()||ngDisabled\" uib-tabindex-toggle>\n" +
     "        {{::getText('first')}}\n" +
@@ -238,7 +238,7 @@ angular.module('n.ui.foundation.tpls', []).run(['$templateCache', function($temp
   );
 
 
-  $templateCache.put('uib/template/src/popover/popover-html.html',
+  $templateCache.put('uib/template/popover/popover-html.html',
     "<div>\n" +
     "    <h3 ng-bind=\"uibTitle\" ng-if=\"uibTitle\"></h3>\n" +
     "    <div ng-bind-html=\"contentExp()\"></div>\n" +
@@ -246,7 +246,7 @@ angular.module('n.ui.foundation.tpls', []).run(['$templateCache', function($temp
   );
 
 
-  $templateCache.put('uib/template/src/popover/popover-template.html',
+  $templateCache.put('uib/template/popover/popover-template.html',
     "<div>\n" +
     "    <h3 ng-bind=\"uibTitle\" ng-if=\"uibTitle\"></h3>\n" +
     "    <div uib-tooltip-template-transclude=\"contentExp()\" tooltip-template-transclude-scope=\"originScope()\"></div>\n" +
@@ -254,7 +254,7 @@ angular.module('n.ui.foundation.tpls', []).run(['$templateCache', function($temp
   );
 
 
-  $templateCache.put('uib/template/src/popover/popover.html',
+  $templateCache.put('uib/template/popover/popover.html',
     "<div>\n" +
     "    <h3 ng-bind=\"uibTitle\" ng-if=\"uibTitle\"></h3>\n" +
     "    <div ng-bind=\"content\"></div>\n" +
@@ -262,19 +262,19 @@ angular.module('n.ui.foundation.tpls', []).run(['$templateCache', function($temp
   );
 
 
-  $templateCache.put('uib/template/src/progressbar/bar.html',
+  $templateCache.put('uib/template/progressbar/bar.html',
     "<div class=\"progress-meter\" role=\"progressbar\" ng-class=\"type\" aria-valuenow=\"{{value}}\" aria-valuemin=\"0\" aria-valuemax=\"{{max}}\" ng-style=\"{width: (percent < 100 ? percent : 100) + '%'}\" aria-valuetext=\"{{percent | number:0}}%\" aria-labelledby=\"{{::title}}\">\n" +
     "    <p class=\"progress-meter-text\" ng-transclude></p>\n" +
     "</div>"
   );
 
 
-  $templateCache.put('uib/template/src/progressbar/progress.html',
+  $templateCache.put('uib/template/progressbar/progress.html',
     "<div class=\"progress\" ng-class=\"type\" ng-transclude aria-labelledby=\"{{::title}}\"></div>"
   );
 
 
-  $templateCache.put('uib/template/src/progressbar/progressbar.html',
+  $templateCache.put('uib/template/progressbar/progressbar.html',
     "<div class=\"progress\" ng-class=\"type\">\n" +
     "    <div class=\"progress-meter\" role=\"progressbar\" aria-valuenow=\"{{value}}\" aria-valuemin=\"0\" aria-valuemax=\"{{max}}\" ng-style=\"{width: (percent < 100 ? percent : 100) + '%'}\" aria-valuetext=\"{{percent | number:0}}%\" aria-labelledby=\"{{::title}}\">\n" +
     "        <p class=\"progress-meter-text\" ng-transclude></p>\n" +
@@ -283,7 +283,7 @@ angular.module('n.ui.foundation.tpls', []).run(['$templateCache', function($temp
   );
 
 
-  $templateCache.put('uib/template/src/rating/rating.html',
+  $templateCache.put('uib/template/rating/rating.html',
     "<span ng-mouseleave=\"reset()\" ng-keydown=\"onKeydown($event)\" tabindex=\"0\" role=\"slider\" aria-valuemin=\"0\" aria-valuemax=\"{{range.length}}\" aria-valuenow=\"{{value}}\" aria-valuetext=\"{{title}}\">\n" +
     "    \n" +
     "    <i ng-repeat=\"r in range track by $index\" ng-mouseenter=\"enter($index + 1)\" ng-click=\"rate($index + 1)\" class=\"material-icons\" ng-attr-title=\"{{r.title}}\">\n" +
@@ -299,7 +299,7 @@ angular.module('n.ui.foundation.tpls', []).run(['$templateCache', function($temp
   );
 
 
-  $templateCache.put('uib/template/src/tabs/tab.html',
+  $templateCache.put('uib/template/tabs/tab.html',
     "<li ng-class=\"[{'is-active': active, 'is-disabled': disabled}, classes]\" class=\"tabs-title\">\n" +
     "    <a ng-click=\"select($event)\" aria-selected=\"{{active}}\" uib-tab-heading-transclude>\n" +
     "        {{heading}}\n" +
@@ -308,7 +308,7 @@ angular.module('n.ui.foundation.tpls', []).run(['$templateCache', function($temp
   );
 
 
-  $templateCache.put('uib/template/src/tabs/tabset.html',
+  $templateCache.put('uib/template/tabs/tabset.html',
     "<div>\n" +
     "    <ul class=\"tabs\" ng-class=\"{'vertical': vertical}\" ng-transclude>\n" +
     "    </ul>\n" +
@@ -320,25 +320,25 @@ angular.module('n.ui.foundation.tpls', []).run(['$templateCache', function($temp
   );
 
 
-  $templateCache.put('uib/template/src/timepicker/timepicker.html',
+  $templateCache.put('uib/template/timepicker/timepicker.html',
     "<table class=\"uib-timepicker\">\n" +
     "    <tbody>\n" +
     "        <tr class=\"text-center\" ng-show=\"::showSpinners\">\n" +
     "            <td class=\"uib-increment hours\">\n" +
     "                <button ng-click=\"incrementHours()\" ng-class=\"{disabled: noIncrementHours()}\" class=\"button small secondary hollow expanded\" ng-disabled=\"noIncrementHours()\" tabindex=\"-1\">\n" +
-    "                    <i class=\"material-icons\">keyboard_arrow_up</i>\n" +
+    "                    <i class=\"material-icons\" ng-include=\"'node_modules/material-design-icons/hardware/svg/production/ic_keyboard_arrow_up_24px.svg'\"></i>\n" +
     "                </button>\n" +
     "            </td>\n" +
     "            <td>&nbsp;</td>\n" +
     "            <td class=\"uib-increment minutes\">\n" +
     "                <button ng-click=\"incrementMinutes()\" ng-class=\"{disabled: noIncrementMinutes()}\" class=\"button small secondary hollow expanded\" ng-disabled=\"noIncrementMinutes()\" tabindex=\"-1\">\n" +
-    "                    <i class=\"material-icons\">keyboard_arrow_up</i>\n" +
+    "                    <i class=\"material-icons\" ng-include=\"'node_modules/material-design-icons/hardware/svg/production/ic_keyboard_arrow_up_24px.svg'\"></i>\n" +
     "                </button>\n" +
     "            </td>\n" +
     "            <td ng-show=\"showSeconds\">&nbsp;</td>\n" +
     "            <td ng-show=\"showSeconds\" class=\"uib-increment seconds\">\n" +
     "                <button ng-click=\"incrementSeconds()\" ng-class=\"{disabled: noIncrementSeconds()}\" class=\"button small secondary hollow expanded\" ng-disabled=\"noIncrementSeconds()\" tabindex=\"-1\">\n" +
-    "                    <i class=\"material-icons\">keyboard_arrow_up</i>\n" +
+    "                    <i class=\"material-icons\" ng-include=\"'node_modules/material-design-icons/hardware/svg/production/ic_keyboard_arrow_up_24px.svg'\"></i>\n" +
     "                </button>\n" +
     "            </td>\n" +
     "            <td ng-show=\"showMeridian\"></td>\n" +
@@ -366,19 +366,19 @@ angular.module('n.ui.foundation.tpls', []).run(['$templateCache', function($temp
     "        <tr class=\"text-center\" ng-show=\"::showSpinners\">\n" +
     "            <td class=\"uib-decrement hours\">\n" +
     "                <button ng-click=\"decrementHours()\" ng-class=\"{disabled: noDecrementHours()}\" class=\"button small secondary hollow expanded\" ng-disabled=\"noDecrementHours()\" tabindex=\"-1\">\n" +
-    "                    <i class=\"material-icons\">keyboard_arrow_down</i>\n" +
+    "                    <i class=\"material-icons\" ng-include=\"'node_modules/material-design-icons/hardware/svg/production/ic_keyboard_arrow_down_24px.svg'\"></i>\n" +
     "                </button>\n" +
     "            </td>\n" +
     "            <td>&nbsp;</td>\n" +
     "            <td class=\"uib-decrement minutes\">\n" +
     "                <button ng-click=\"decrementMinutes()\" ng-class=\"{disabled: noDecrementMinutes()}\" class=\"button small secondary hollow expanded\" ng-disabled=\"noDecrementMinutes()\" tabindex=\"-1\">\n" +
-    "                    <i class=\"material-icons\">keyboard_arrow_down</i>\n" +
+    "                    <i class=\"material-icons\" ng-include=\"'node_modules/material-design-icons/hardware/svg/production/ic_keyboard_arrow_down_24px.svg'\"></i>\n" +
     "                </button>\n" +
     "            </td>\n" +
     "            <td ng-show=\"showSeconds\">&nbsp;</td>\n" +
     "            <td ng-show=\"showSeconds\" class=\"uib-decrement seconds\">\n" +
     "                <button ng-click=\"decrementSeconds()\" ng-class=\"{disabled: noDecrementSeconds()}\" class=\"button small secondary hollow expanded\" ng-disabled=\"noDecrementSeconds()\" tabindex=\"-1\">\n" +
-    "                    <i class=\"material-icons\">keyboard_arrow_down</i>\n" +
+    "                    <i class=\"material-icons\" ng-include=\"'node_modules/material-design-icons/hardware/svg/production/ic_keyboard_arrow_down_24px.svg'\"></i>\n" +
     "                </button>\n" +
     "            </td>\n" +
     "            <td ng-show=\"showMeridian\"></td>\n" +
@@ -388,30 +388,30 @@ angular.module('n.ui.foundation.tpls', []).run(['$templateCache', function($temp
   );
 
 
-  $templateCache.put('uib/template/src/tooltip/tooltip-html-popup.html',
+  $templateCache.put('uib/template/tooltip/tooltip-html-popup.html',
     "<!--<div class=\"tooltip-arrow\"></div>-->\n" +
     "<div class=\"tooltip-inner\" ng-bind-html=\"contentExp()\"></div>"
   );
 
 
-  $templateCache.put('uib/template/src/tooltip/tooltip-popup.html',
+  $templateCache.put('uib/template/tooltip/tooltip-popup.html',
     "<!--<div class=\"tooltip-arrow\"></div>-->\n" +
     "<div class=\"tooltip-inner\" ng-bind=\"content\"></div>"
   );
 
 
-  $templateCache.put('uib/template/src/tooltip/tooltip-template-popup.html',
+  $templateCache.put('uib/template/tooltip/tooltip-template-popup.html',
     "<!--<div class=\"tooltip-arrow\"></div>-->\n" +
     "<div class=\"tooltip-inner\" uib-tooltip-template-transclude=\"contentExp()\" tooltip-template-transclude-scope=\"originScope()\"></div>"
   );
 
 
-  $templateCache.put('uib/template/src/typeahead/typeahead-match.html',
+  $templateCache.put('uib/template/typeahead/typeahead-match.html',
     "<a href tabindex=\"-1\" ng-bind-html=\"match.label | uibTypeaheadHighlight:query\" ng-attr-title=\"{{match.label}}\"></a>"
   );
 
 
-  $templateCache.put('uib/template/src/typeahead/typeahead-popup.html',
+  $templateCache.put('uib/template/typeahead/typeahead-popup.html',
     "<ul class=\"menu vertical\" ng-show=\"isOpen() && !moveInProgress\" ng-style=\"{top: position().top+'px', left: position().left+'px'}\" role=\"listbox\" aria-hidden=\"{{!isOpen()}}\">\n" +
     "    <li class=\"uib-typeahead-match\" ng-repeat=\"match in matches track by $index\" ng-class=\"{active: isActive($index) }\" ng-mouseenter=\"selectActive($index)\" ng-click=\"selectMatch($index, $event)\" role=\"option\" id=\"{{::match.id}}\">\n" +
     "        <div uib-typeahead-match index=\"$index\" match=\"match\" query=\"query\" template-url=\"templateUrl\">\n" +

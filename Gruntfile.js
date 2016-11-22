@@ -123,9 +123,11 @@ module.exports = function (grunt) {
 					standalone: true,
 					module: 'n.ui.foundation.tpls',
 					url: function(path) {
-						var neededSubStr = path.split('./');
+						console.log(path)
+						var neededSubStr = path.split('src/');
 						var postfix = neededSubStr[neededSubStr.length - 1];
 						var prefix = 'uib/template';
+						console.log([prefix, postfix].join('/'))
 						return [prefix, postfix].join('/');
 					},
 					htmlmin: {
