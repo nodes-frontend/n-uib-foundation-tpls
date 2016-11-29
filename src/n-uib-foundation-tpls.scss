@@ -19,3 +19,11 @@
 
 @import "utils/collapse";
 @import "utils/material-icons";
+
+@mixin n-uib-foundation-include-everything {
+	@include n-uib-foundation-accordion;
+	@include n-uib-foundation-alert-contextual-styles;
+	@include n-uib-foundation-alert-fade-animation;
+	@include n-uib-foundation-button-contextual-styles;
+	@include n-uib-foundation-timepicker;
+}

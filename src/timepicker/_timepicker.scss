@@ -1,33 +1,38 @@
-.uib-timepicker {
-	width: auto;
+$n-uib-foundation-time-input-width: 50px !default;
+$n-uib-foundation-time-button-padding: 4px !default;
 
-	tbody tr:nth-child(even) {
-		background-color: transparent;
-	}
-}
-.uib-time input {
-	width: 50px;
-	margin-bottom: 0;
-}
+@mixin n-uib-foundation-timepicker {
+	.uib-timepicker {
+		width: auto;
 
-.uib-increment button,
-.uib-increment .button,
-.uib-decrement button,
-.uib-decrement .button {
-	padding: 4px;
-	.material-icons {
-		display: block;
+		tbody tr:nth-child(even) {
+			background-color: transparent;
+		}
 	}
-	svg {
-		vertical-align: middle;
+	.uib-time input {
+		width: $n-uib-foundation-time-input-width;
+		margin-bottom: 0;
 	}
-}
 
-.uib-increment button,
-.uib-increment .button,
-.uib-decrement button,
-.uib-decrement .button,
-.uib-time.am-pm button,
-.uib-time.am-pm .button {
-	margin-bottom: 0;
+	.uib-increment button,
+	.uib-increment .button,
+	.uib-decrement button,
+	.uib-decrement .button {
+		padding: $n-uib-foundation-time-button-padding;
+		.material-icons {
+			display: block;
+		}
+		svg {
+			vertical-align: middle;
+		}
+	}
+
+	.uib-increment button,
+	.uib-increment .button,
+	.uib-decrement button,
+	.uib-decrement .button,
+	.uib-time.am-pm button,
+	.uib-time.am-pm .button {
+		margin-bottom: 0;
+	}
 }
