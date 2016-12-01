@@ -44,7 +44,7 @@ angular.module('n.ui.foundation.tpls', []).run(['$templateCache', function($temp
     "        <tr>\n" +
     "            <th>\n" +
     "                <button type=\"button\" class=\"button expanded hollow uib-datepicker__icon-button\" ng-click=\"move(-1)\" tabindex=\"-1\">\n" +
-    "                    <i class=\"material-icons\" ng-include=\"'node_modules/material-design-icons/hardware/svg/production/ic_keyboard_arrow_left_24px.svg'\"></i>\n" +
+    "                    <i class=\"fi-chevron-left\"></i>\n" +
     "                    <span class=\"show-for-sr\">previous</span>\n" +
     "                </button>\n" +
     "            </th>\n" +
@@ -55,7 +55,7 @@ angular.module('n.ui.foundation.tpls', []).run(['$templateCache', function($temp
     "            </th>\n" +
     "            <th>\n" +
     "                <button type=\"button\" class=\"button expanded hollow uib-datepicker__icon-button\" ng-click=\"move(1)\" tabindex=\"-1\">\n" +
-    "                    <i class=\"material-icons\" ng-include=\"'node_modules/material-design-icons/hardware/svg/production/ic_keyboard_arrow_right_24px.svg'\"></i>\n" +
+    "                    <i class=\"fi-chevron-right\"></i>\n" +
     "                    <span class=\"show-for-sr\">next</span>\n" +
     "                </button>\n" +
     "            </th>\n" +
@@ -91,7 +91,7 @@ angular.module('n.ui.foundation.tpls', []).run(['$templateCache', function($temp
     "        <tr>\n" +
     "            <th>\n" +
     "                <button type=\"button\" class=\"button expanded hollow uib-datepicker__icon-button\" ng-click=\"move(-1)\" tabindex=\"-1\">\n" +
-    "                    <i class=\"material-icons\" ng-include=\"'node_modules/material-design-icons/hardware/svg/production/ic_keyboard_arrow_left_24px.svg'\"></i>\n" +
+    "                    <i class=\"fi-chevron-left\"></i>\n" +
     "                    <span class=\"show-for-sr\">previous</span>\n" +
     "                </button>\n" +
     "            </th>\n" +
@@ -102,7 +102,7 @@ angular.module('n.ui.foundation.tpls', []).run(['$templateCache', function($temp
     "            </th>\n" +
     "            <th>\n" +
     "                <button type=\"button\" class=\"button expanded hollow uib-datepicker__icon-button\" ng-click=\"move(1)\" tabindex=\"-1\">\n" +
-    "                    <i class=\"material-icons\" ng-include=\"'node_modules/material-design-icons/hardware/svg/production/ic_keyboard_arrow_right_24px.svg'\"></i>\n" +
+    "                    <i class=\"fi-chevron-right\"></i>\n" +
     "                    <span class=\"show-for-sr\">next</span>\n" +
     "                </button>\n" +
     "            </th>\n" +
@@ -129,7 +129,7 @@ angular.module('n.ui.foundation.tpls', []).run(['$templateCache', function($temp
     "        <tr>\n" +
     "            <th>\n" +
     "                <button type=\"button\" class=\"button expanded hollow uib-datepicker__icon-button\" ng-click=\"move(-1)\" tabindex=\"-1\">\n" +
-    "                    <i class=\"material-icons\" ng-include=\"'node_modules/material-design-icons/hardware/svg/production/ic_keyboard_arrow_left_24px.svg'\"></i>\n" +
+    "                    <i class=\"fi-chevron-left\"></i>\n" +
     "                    <span class=\"show-for-sr\">previous</span>\n" +
     "                </button>\n" +
     "            </th>\n" +
@@ -140,7 +140,7 @@ angular.module('n.ui.foundation.tpls', []).run(['$templateCache', function($temp
     "            </th>\n" +
     "            <th>\n" +
     "                <button type=\"button\" class=\"button expanded hollow uib-datepicker__icon-button\" ng-click=\"move(1)\" tabindex=\"-1\">\n" +
-    "                    <i class=\"material-icons\" ng-include=\"'node_modules/material-design-icons/hardware/svg/production/ic_keyboard_arrow_right_24px.svg'\"></i>\n" +
+    "                    <i class=\"fi-chevron-right\"></i>\n" +
     "                    <span class=\"show-for-sr\">next</span>\n" +
     "                </button>\n" +
     "            </th>\n" +
@@ -287,14 +287,9 @@ angular.module('n.ui.foundation.tpls', []).run(['$templateCache', function($temp
     "<span ng-mouseleave=\"reset()\" ng-keydown=\"onKeydown($event)\" tabindex=\"0\" role=\"slider\" aria-valuemin=\"0\" aria-valuemax=\"{{range.length}}\" aria-valuenow=\"{{value}}\" aria-valuetext=\"{{title}}\">\n" +
     "    \n" +
     "    <i ng-repeat=\"r in range track by $index\" ng-mouseenter=\"enter($index + 1)\" ng-click=\"rate($index + 1)\" class=\"material-icons\" ng-attr-title=\"{{r.title}}\">\n" +
-    "        <span ng-if=\"$index < value\">\n" +
-    "            {{r.stateOn || 'star'}}\n" +
-    "        </span>\n" +
-    "        <span ng-if=\"$index >= value\">\n" +
-    "            {{r.stateOff || 'star_border'}}\n" +
-    "        </span>\n" +
+    "        <span ng-if=\"$index < value\" class=\"{{r.stateOn || 'text-color-primary fi-star'}}\"></span>\n" +
+    "        <span ng-if=\"$index >= value\" class=\"{{r.stateOff || 'fi-star'}}\"></span>\n" +
     "    </i>\n" +
-    "    \n" +
     "</span>"
   );
 
@@ -418,30 +413,6 @@ angular.module('n.ui.foundation.tpls', []).run(['$templateCache', function($temp
     "        </div>\n" +
     "    </li>\n" +
     "</ul>"
-  );
-
-}]);
-
-angular.module('n.ui.foundation.tpls').run(['$templateCache', function($templateCache) {
-  'use strict';
-
-  $templateCache.put('node_modules/material-design-icons/hardware/svg/production/ic_keyboard_arrow_up_24px.svg',
-    "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewbox=\"0 0 24 24\"><path d=\"M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z\"></svg>"
-  );
-
-
-  $templateCache.put('node_modules/material-design-icons/hardware/svg/production/ic_keyboard_arrow_right_24px.svg',
-    "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewbox=\"0 0 24 24\"><path d=\"M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z\"></svg>"
-  );
-
-
-  $templateCache.put('node_modules/material-design-icons/hardware/svg/production/ic_keyboard_arrow_down_24px.svg',
-    "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewbox=\"0 0 24 24\"><path d=\"M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z\"></svg>"
-  );
-
-
-  $templateCache.put('node_modules/material-design-icons/hardware/svg/production/ic_keyboard_arrow_left_24px.svg',
-    "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewbox=\"0 0 24 24\"><path d=\"M15.41 16.09l-4.58-4.59 4.58-4.59L14 5.5l-6 6 6 6z\"></svg>"
   );
 
 }]);

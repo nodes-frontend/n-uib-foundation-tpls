@@ -1,14 +1,21 @@
-.collapse {
-  display: none;
+$n-uib-foundation-collapse-animation-timing: .3s !default;
+$n-uib-foundation-collapse-animation-easing: ease-out !default;
 
-  &.in      { display: block; }
-  tr.in    { display: table-row; }
-  tbody.in { display: table-row-group; }
+@mixin n-uib-foundation-collapse {
+  .collapse {
+    display: none;
+
+    &.in      { display: block; }
+    tr.in    { display: table-row; }
+    tbody.in { display: table-row-group; }
+  }
 }
 
-.collapsing {
-  position: relative;
-  height: 0;
-  overflow: hidden;
-  transition: height .35s ease, visibility .35s ease;
+@mixin n-uib-foundation-collapse-animation {
+  .collapsing {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    transition: height $n-uib-foundation-collapse-animation-timing $n-uib-foundation-collapse-animation-easing;
+  }
 }

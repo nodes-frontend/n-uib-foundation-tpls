@@ -1,7 +1,6 @@
 $n-uib-foundation-alert-animation-timing: .3s !default;
 $n-uib-foundation-alert-animation-easing: ease-out !default;
 
-
 @mixin n-uib-foundation-alert-contextual-styles {
   .callout.alert.success {
     @include callout-style($success-color);

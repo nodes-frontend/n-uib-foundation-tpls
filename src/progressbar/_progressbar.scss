@@ -1,29 +1,38 @@
-.progress {
-  overflow: hidden;
+$n-uib-foundation-progressbar-animation-timing: .6s !default;
+$n-uib-foundation-progressbar-animation-easing: ease !default;
+
+@mixin n-uib-foundation-progressbar {
+  .progress {
+    overflow: hidden;
+  }
+
+  .progress-meter {
+    float: left;
+  }
 }
 
-.progress-meter {
-  float: left;
+@mixin n-uib-foundation-progressbar-animation {
+  // Mimic transition from Bootstrap
+  .progress-meter {
+    transition: width $n-uib-foundation-progressbar-animation-timing $n-uib-foundation-progressbar-animation-easing;
+  }
 }
 
-// Mimic transition from Bootstrap
-.progress-meter {
-  transition: width .6s ease;
-}
-
-// Bars can also be colored
-.progress-meter {
-  background-color: $primary-color;
-  &.secondary {
-    background-color: $secondary-color;
-  }
-  &.success {
-    background-color: $success-color;
-  }
-  &.warning {
-    background-color: $warning-color;
-  }
-  &.alert {
-    background-color: $alert-color;
+@mixin n-uib-foundation-progressbar-contextual-styles {
+  // Bars can also be colored
+  .progress-meter {
+    background-color: $primary-color;
+    &.secondary {
+      background-color: $secondary-color;
+    }
+    &.success {
+      background-color: $success-color;
+    }
+    &.warning {
+      background-color: $warning-color;
+    }
+    &.alert {
+      background-color: $alert-color;
+    }
   }
 }

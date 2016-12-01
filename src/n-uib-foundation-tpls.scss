@@ -19,11 +19,24 @@
 
 @import "utils/collapse";
 @import "utils/material-icons";
+@import "utils/open-iconic";
 
 @mixin n-uib-foundation-include-everything {
 	@include n-uib-foundation-accordion;
 	@include n-uib-foundation-alert-contextual-styles;
 	@include n-uib-foundation-alert-fade-animation;
 	@include n-uib-foundation-button-contextual-styles;
+	@include n-uib-foundation-collapse;
+	@include n-uib-foundation-collapse-animation;
+	@include n-uib-foundation-datepicker;
+	@include n-uib-foundation-datepicker-popup;
+	@include n-uib-foundation-dropdown;
+	@include n-uib-foundation-modal;
+	@include n-uib-foundation-modal-animation;
+	@include n-uib-foundation-pager;
+	@include n-uib-foundation-pagination;
+	@include n-uib-foundation-popover;
+	@include n-uib-foundation-popover-animation;
+	@include n-uib-foundation-rating;
 	@include n-uib-foundation-timepicker;
 }

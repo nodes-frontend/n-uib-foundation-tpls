@@ -48,6 +48,16 @@ module.exports = function (grunt) {
 					'src/**/*.scss'
 				],
 				tasks: ['sass', 'postcss:dist', 'cssmin:dist']
+			},
+			templates: {
+				files: [
+					'src/**/*.html'
+				],
+				tasks: [
+					'clean:dist',
+					'ngtemplates:foundation',
+					'concat'
+				]
 			}
 		},
 
@@ -118,7 +128,7 @@ module.exports = function (grunt) {
 			foundation: {
 				cwd: './',
 				src: UIB_TEMPLATES,
-				dest: 'n-uib-foundation-tpls.js',
+				dest: '.tmp/scripts/n-uib-foundation-tpls.js',
 				options: {
 					standalone: true,
 					module: 'n.ui.foundation.tpls',
@@ -145,7 +155,7 @@ module.exports = function (grunt) {
 			icons: {
 				cwd: './',
 				src: MATERIAL_ICONS,
-				dest: 'n-google-material-icons-tpls.js',
+				dest: '.tmp/scripts/n-google-material-icons-tpls.js',
 				options: {
 					standalone: false,
 					module: 'n.ui.foundation.tpls',
@@ -169,8 +179,8 @@ module.exports = function (grunt) {
 		// Concatenate the scripts and the newly generated environment constant
 		concat: {
 			dist: {
-				src: ['n-uib-foundation-tpls.js', 'n-google-material-icons-tpls.js'],
-				dest: 'n-uib-foundation.js'
+				src: ['.tmp/scripts/n-uib-foundation-tpls.js', '.tmp/scripts/n-google-material-icons-tpls.js'],
+				dest: './n-uib-foundation.js'
 			}
 		},
 		// Disable Mangling: http://lisperator.net/uglifyjs/mangle

@@ -1,34 +1,40 @@
-[uib-dropdown] {
-  position: relative;
-  ul {
-    margin-bottom: 0;
-  }
-}
-[uib-dropdown].open [uib-dropdown-menu] {
-  display: block;
-  z-index: 1;
-}
-[uib-dropdown-menu] {
-  display: none;
-  position: absolute;
+$n-uib-foundation-dropdown-min-width: $dropdownmenu-min-width !default;
+$n-uib-foundation-dropdown-background: $dropdownmenu-background !default;
+$n-uib-foundation-dropdown-border: $dropdownmenu-border !default;
 
-  min-width: $dropdownmenu-min-width;
-
-  visibility: visible;
-
-  background: $dropdownmenu-background;
-  border: $dropdownmenu-border;
-
-  &.top {
-    bottom: 100%;
+@mixin n-uib-foundation-dropdown {
+  [uib-dropdown] {
+    position: relative;
+    ul {
+      margin-bottom: 0;
+    }
   }
-  &.right {
-    right: 0;
+  [uib-dropdown].open [uib-dropdown-menu] {
+    display: block;
+    z-index: 1;
   }
-  &.bottom {
-    top: 100%;
-  }
-  &.left {
-    left: 0;
+  [uib-dropdown-menu] {
+    display: none;
+    position: absolute;
+
+    min-width: $n-uib-foundation-dropdown-min-width;
+
+    visibility: visible;
+
+    background: $n-uib-foundation-dropdown-background;
+    border: $n-uib-foundation-dropdown-border;
+
+    &.top {
+      bottom: 100%;
+    }
+    &.right {
+      right: 0;
+    }
+    &.bottom {
+      top: 100%;
+    }
+    &.left {
+      left: 0;
+    }
   }
 }

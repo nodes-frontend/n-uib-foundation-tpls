@@ -1,19 +1,23 @@
-.uib-datepicker-popup {
-	@include dropdown-container;
-	visibility: visible;
-	width: auto;
+$n-uib-foundation-datepicker-popup-padding: $global-padding / 2 !default;
 
-	padding: $global-padding / 2;
+@mixin n-uib-foundation-datepicker-popup {
+	.uib-datepicker-popup {
+		@include dropdown-container;
+		visibility: visible;
+		width: auto;
 
-	table {
-		margin-bottom: 0;
-	}
-	.uib-button-bar {
-		padding-left: 0;
-		padding-right: 0;
-	}
-	.uib-button-bar button,
-	.uib-button-bar .button {
-		margin-bottom: 0;
+		padding: $n-uib-foundation-datepicker-popup-padding;
+
+		table {
+			margin-bottom: 0;
+		}
+		.uib-button-bar {
+			padding-left: 0;
+			padding-right: 0;
+		}
+		.uib-button-bar button,
+		.uib-button-bar .button {
+			margin-bottom: 0;
+		}
 	}
 }

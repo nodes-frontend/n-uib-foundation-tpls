@@ -1,39 +1,41 @@
-[uib-pager] {
-  @include pagination-container;
+@mixin n-uib-foundation-pager {
+  [uib-pager] {
+    @include pagination-container;
 
-  a {
-    user-select: none;
-  }
-
-  .disabled {
-    @include pagination-item-disabled;
-    &:focus {
-      outline: none;
+    a {
+      user-select: none;
     }
-  }
-  .disabled a {
-    color: inherit;
-    display: block;
-    padding: 0;
-    border-radius: 0;
-    &:hover {
-      background-color: inherit;
-      cursor: inherit;
+
+    .disabled {
+      @include pagination-item-disabled;
+      &:focus {
+        outline: none;
+      }
     }
-  }
+    .disabled a {
+      color: inherit;
+      display: block;
+      padding: 0;
+      border-radius: 0;
+      &:hover {
+        background-color: inherit;
+        cursor: inherit;
+      }
+    }
 
-  li:last-child {
-    float: right;
-  }
-
-  &.text-center {
     li:last-child {
-      float: none;
+      float: right;
+    }
+
+    &.text-center {
+      li:last-child {
+        float: none;
+      }
     }
   }
-}
 
-.pagination-previous a::before, .pagination-previous.disabled::before,
-.pagination-next a::after, .pagination-next.disabled::after {
-  display: none;
+  .pagination-previous a::before, .pagination-previous.disabled::before,
+  .pagination-next a::after, .pagination-next.disabled::after {
+    display: none;
+  }
 }

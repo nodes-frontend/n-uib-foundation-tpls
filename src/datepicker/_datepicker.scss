@@ -1,64 +1,64 @@
 $n-uib-foundation-datepicker-cell-padding: rem-calc(4 2) !default;
-$n-uib-foundation-datepicker-button-background: $secondary-color !default;
-$n-uib-foundation-datepicker-button-font-size: 0.75rem !default;
-$n-uib-foundation-datepicker-button-icon-padding: 4px !default;
+$n-uib-foundation-datepicker-button-color: $secondary-color !default;
 $n-uib-foundation-datepicker-button-active-color: $primary-color !default;
 $n-uib-foundation-datepicker-button-selected-color: $primary-color !default;
 $n-uib-foundation-datepicker-button-muted-color: lighten($secondary-color, 35%) !default;
+$n-uib-foundation-datepicker-button-font-size: 0.75rem !default;
 $n-uib-foundation-datepicker-week-padding: $button-padding !default;
-[uib-datepicker] {
+$n-uib-foundation-datepicker-week-font-size: rem-calc(12) !default;
 
-	table thead th, table thead td,
-	table tfoot th, table tfoot td,
-	table tbody th, table tbody td {
-		padding: rem-calc(4 2);
-	}
+@mixin n-uib-foundation-datepicker {
+	[uib-datepicker] {
 
-	button,
-	.button {
-		@include button(
-			$background: $secondary-color,
-			$style: 'hollow'
-		);
-		margin-bottom: 0;
-		font-size: 0.75rem;
-	}
-
-	.uib-datepicker__icon-button {
-		padding: 4px;
-		.material-icons {
-			display: block;
+		table thead th, table thead td,
+		table tfoot th, table tfoot td,
+		table tbody th, table tbody td {
+			padding: $n-uib-foundation-datepicker-cell-padding;
 		}
-		svg {
-			vertical-align: middle;
+
+		button,
+		.button {
+			@include button(
+					$background: $n-uib-foundation-datepicker-button-color,
+					$style: 'hollow'
+			);
+			margin-bottom: 0;
+			font-size: $n-uib-foundation-datepicker-button-font-size;
 		}
-	}
 
-	button.active,
-	.button.active {
-		@include button-hollow-style($color: $primary-color);
-	}
+		.uib-datepicker__icon-button {
+			i:before {
+				font-size: calc(1em - 1px);
+				//vertical-align: middle;
+			}
+		}
 
-	button.selected,
-	.button.selected {
-		@include button-style($background: $primary-color);
-	}
+		button.active,
+		.button.active {
+			@include button-hollow-style($color: $n-uib-foundation-datepicker-button-active-color);
+		}
 
-	.text-muted {
-		color: lighten($secondary-color, 35%);
-	}
+		button.selected,
+		.button.selected {
+			@include button-style($background: $n-uib-foundation-datepicker-button-selected-color);
+		}
 
-	.uib-weeks td {
-		font-size: rem-calc(12);
-	}
-	.uib-weeks em {
-		padding: $button-padding;
-	}
+		.text-muted {
+			color: $n-uib-foundation-datepicker-button-muted-color;
+		}
 
-}
-[uib-datepicker],
-[uib-daypicker] {
-	&:focus {
-		outline: none;
+		.uib-weeks td {
+			font-size: $n-uib-foundation-datepicker-week-font-size;
+		}
+		.uib-weeks em {
+			padding: $n-uib-foundation-datepicker-week-padding;
+		}
+
+	}
+	[uib-datepicker],
+	[uib-daypicker] {
+		&:focus {
+			outline: none;
+		}
 	}
 }

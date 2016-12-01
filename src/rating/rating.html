@@ -12,12 +12,7 @@
        ng-click="rate($index + 1)"
        class="material-icons"
        ng-attr-title="{{r.title}}">
-        <span ng-if="$index < value">
-            {{r.stateOn || 'star'}}
-        </span>
-        <span ng-if="$index >= value">
-            {{r.stateOff || 'star_border'}}
-        </span>
+        <span ng-if="$index < value" class="{{r.stateOn || 'text-color-primary fi-star'}}"></span>
+        <span ng-if="$index >= value" class="{{r.stateOff || 'fi-star'}}"></span>
     </i>
-    
 </span>
