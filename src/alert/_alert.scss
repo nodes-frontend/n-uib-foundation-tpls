@@ -19,7 +19,7 @@ $n-uib-foundation-alert-animation-easing: ease-out !default;
   }
 }
 
-@mixin n-uib-foundation-alert-fade-animation {
+@mixin n-uib-foundation-alert-animation {
   .callout.ng-animate {
     transition: opacity $n-uib-foundation-alert-animation-timing $n-uib-foundation-alert-animation-easing;
   }

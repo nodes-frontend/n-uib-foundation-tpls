@@ -1,10 +1,16 @@
+// Accordion
 $n-uib-foundation-accordion-border: $accordion-content-border;
 $n-uib-foundation-accordion-disabled-color: $dark-gray;
 $n-uib-foundation-accordion-disabled-background: lighten($light-gray, 5%);
 
-$n-uib-foundation-collapse-animation-timing: .3s;
-$n-uib-foundation-collapse-animation-easing: ease-out;
+// Alert
+$n-uib-foundation-alert-animation-timing: .3s;
+$n-uib-foundation-alert-animation-easing: ease-out;
 
+// Button
+
+// Datepicker
+$n-uib-foundation-datepicker-background: $white;
 $n-uib-foundation-datepicker-cell-padding: rem-calc(4 2);
 $n-uib-foundation-datepicker-button-color: $secondary-color;
 $n-uib-foundation-datepicker-button-active-color: $primary-color;
@@ -15,12 +21,15 @@ $n-uib-foundation-datepicker-button-icon-padding: 4px;
 $n-uib-foundation-datepicker-week-padding: $button-padding;
 $n-uib-foundation-datepicker-week-font-size: rem-calc(12);
 
+// Datepicker Popup
 $n-uib-foundation-datepicker-popup-padding: $global-padding / 2;
 
+// Dropdown
 $n-uib-foundation-dropdown-min-width: $dropdownmenu-min-width;
 $n-uib-foundation-dropdown-background: $dropdownmenu-background;
 $n-uib-foundation-dropdown-border: $dropdownmenu-border;
 
+// Modal
 $n-uib-foundation-modal-wrapper-animation-timing: .3s;
 $n-uib-foundation-modal-wrapper-animation-esing: ease-out;
 $n-uib-foundation-modal-reveal-animation-timing: .3s;
@@ -28,10 +37,34 @@ $n-uib-foundation-modal-reveal-animation-esing: ease-out;
 $n-uib-foundation-modal-backdrop-animation-timing: .15s;
 $n-uib-foundation-modal-backdrop-animation-esing: linear;
 
+// Pager
+
+// Pagination
+
+// Popover
+$n-uib-foundation-popover-background: $white;
+$n-uib-foundation-popover-animation-timing: .3s;
+$n-uib-foundation-popover-animation-easing: ease-out;
+
+// Progressbar
 $n-uib-foundation-progressbar-animation-timing: .6s;
 $n-uib-foundation-progressbar-animation-easing: ease;
 
+// Rating
 $n-uib-rating-item-padding: $label-padding;
 
-$n-uib-foundation-time-input-width: 50px;
-$n-uib-foundation-time-button-padding: 4px;
+// Tabs
+$n-uib-tab-title-disabled-color: $dark-gray;
+$n-uib-tab-content-margin-bottom: $global-margin;
+
+// Timepicker
+$n-uib-foundation-timepicker-input-width: 50px;
+$n-uib-foundation-timepicker-button-padding: 4px;
+
+// Tooltip
+
+// Typeahead
+
+// Utility
+$n-uib-foundation-collapse-animation-timing: .3s;
+$n-uib-foundation-collapse-animation-easing: ease-out;

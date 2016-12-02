@@ -5,8 +5,14 @@ $n-uib-foundation-datepicker-popup-padding: $global-padding / 2 !default;
 		@include dropdown-container;
 		visibility: visible;
 		width: auto;
+		background-color: $n-uib-foundation-datepicker-background;
 
 		padding: $n-uib-foundation-datepicker-popup-padding;
+
+		[uib-datepicker] {
+			padding: 0;
+			border: none;
+		}
 
 		table {
 			margin-bottom: 0;

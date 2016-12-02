@@ -1,5 +1,5 @@
-$n-uib-foundation-time-input-width: 50px !default;
-$n-uib-foundation-time-button-padding: 4px !default;
+$n-uib-foundation-timepicker-input-width: 50px !default;
+$n-uib-foundation-timepicker-button-padding: 4px !default;
 
 @mixin n-uib-foundation-timepicker {
 	.uib-timepicker {
@@ -10,7 +10,7 @@ $n-uib-foundation-time-button-padding: 4px !default;
 		}
 	}
 	.uib-time input {
-		width: $n-uib-foundation-time-input-width;
+		width: $n-uib-foundation-timepicker-input-width;
 		margin-bottom: 0;
 	}
 
@@ -18,7 +18,7 @@ $n-uib-foundation-time-button-padding: 4px !default;
 	.uib-increment .button,
 	.uib-decrement button,
 	.uib-decrement .button {
-		padding: $n-uib-foundation-time-button-padding;
+		padding: $n-uib-foundation-timepicker-button-padding;
 		.material-icons {
 			display: block;
 		}

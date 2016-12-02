@@ -1,3 +1,4 @@
+$n-uib-foundation-datepicker-background: $white !default;
 $n-uib-foundation-datepicker-cell-padding: rem-calc(4 2) !default;
 $n-uib-foundation-datepicker-button-color: $secondary-color !default;
 $n-uib-foundation-datepicker-button-active-color: $primary-color !default;
@@ -9,6 +10,19 @@ $n-uib-foundation-datepicker-week-font-size: rem-calc(12) !default;
 
 @mixin n-uib-foundation-datepicker {
 	[uib-datepicker] {
+		@include callout-base();
+		@include callout-size(0.5rem);
+
+		table {
+			margin-bottom: 0;
+		}
+
+		table thead,
+		table tfoot,
+		table tbody {
+			background-color: $n-uib-foundation-datepicker-background;
+			border: none;
+		}
 
 		table thead th, table thead td,
 		table tfoot th, table tfoot td,

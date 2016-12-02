@@ -1,4 +1,4 @@
-@import "../node_modules/foundation-sites/scss/foundation";
+@import "../bower_components/foundation-sites/scss/foundation";
 
 @import "accordion/accordion";
 @import "alert/alert";
@@ -23,21 +23,45 @@
 @import "../bower_components/font-awesome/scss/font-awesome";
 
 @mixin n-uib-foundation-include-everything {
+	// Accordion
 	@include n-uib-foundation-accordion;
+	// Alert
 	@include n-uib-foundation-alert-contextual-styles;
-	@include n-uib-foundation-alert-fade-animation;
+	@include n-uib-foundation-alert-animation;
+	// Button
 	@include n-uib-foundation-button-contextual-styles;
-	@include n-uib-foundation-collapse;
-	@include n-uib-foundation-collapse-animation;
+	// Datepicker
 	@include n-uib-foundation-datepicker;
+	// Datepicker Popup
 	@include n-uib-foundation-datepicker-popup;
+	// Dropodwn
 	@include n-uib-foundation-dropdown;
+	// Modal
 	@include n-uib-foundation-modal;
 	@include n-uib-foundation-modal-animation;
+	// Pager
 	@include n-uib-foundation-pager;
+	// Pagination
 	@include n-uib-foundation-pagination;
+	// Popover
 	@include n-uib-foundation-popover;
 	@include n-uib-foundation-popover-animation;
+	// Progressbar
+	@include n-uib-foundation-progressbar;
+	@include n-uib-foundation-progressbar-animation;
+	@include n-uib-foundation-progressbar-contextual-styles;
+	// Rating
 	@include n-uib-foundation-rating;
+	// Tabs
+	@include n-uib-foundation-tabs;
+	// Timepicker
 	@include n-uib-foundation-timepicker;
+	// Tooltip
+	@include n-uib-foundation-tooltip;
+	// Typeahead
+	@include n-uib-foundation-typeahead;
+	// Utility
+	@include n-uib-foundation-collapse;
+	@include n-uib-foundation-collapse-animation;
+	@include n-uib-foundation-font-awesome-button-alignment-fixes;
 }

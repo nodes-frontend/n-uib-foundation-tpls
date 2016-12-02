@@ -8,20 +8,22 @@ $fa-inverse: $white;
 $fa-li-width: (30em / 14);
 
 // Fixes weird alignment in buttons
-button,
-.button {
-  .fa {
-    position: relative;
-    line-height: calc(1em - 4px);
-    top: -1px;
-  }
+@mixin n-uib-foundation-font-awesome-button-alignment-fixes {
+  button,
+  .button {
+    .fa {
+      position: relative;
+      line-height: calc(1em - 4px);
+      top: -1px;
+    }
 
-  &.tiny .fa,
-  &.small .fa {
+    &.tiny .fa,
+    &.small .fa {
 
-  }
+    }
 
-  &.large .fa {
-    line-height: calc(1em - 6px);
+    &.large .fa {
+      line-height: calc(1em - 6px);
+    }
   }
 }
