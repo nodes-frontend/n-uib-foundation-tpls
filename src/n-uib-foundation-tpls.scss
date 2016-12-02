@@ -18,8 +18,9 @@
 @import "typeahead/typeahead";
 
 @import "utils/collapse";
-@import "utils/material-icons";
-@import "utils/open-iconic";
+@import "utils/font-awesome";
+
+@import "../bower_components/font-awesome/scss/font-awesome";
 
 @mixin n-uib-foundation-include-everything {
 	@include n-uib-foundation-accordion;

@@ -26,10 +26,10 @@ $n-uib-foundation-datepicker-week-font-size: rem-calc(12) !default;
 			font-size: $n-uib-foundation-datepicker-button-font-size;
 		}
 
+		// So many issues with icon font in button in table 0o
 		.uib-datepicker__icon-button {
-			i:before {
-				font-size: calc(1em - 1px);
-				//vertical-align: middle;
+			.fa {
+				line-height: 1px;
 			}
 		}
 

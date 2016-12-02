@@ -133,32 +133,11 @@ module.exports = function (grunt) {
 					standalone: true,
 					module: 'n.ui.foundation.tpls',
 					url: function(path) {
-						console.log(path)
 						var neededSubStr = path.split('src/');
 						var postfix = neededSubStr[neededSubStr.length - 1];
 						var prefix = 'uib/template';
-						console.log([prefix, postfix].join('/'))
 						return [prefix, postfix].join('/');
 					},
-					htmlmin: {
-						collapseBooleanAttributes: false,
-						collapseWhitespace: false,
-						removeAttributeQuotes: false,
-						removeComments: false, // Only if you don't use comment directives!
-						removeEmptyAttributes: false,
-						removeRedundantAttributes: false,
-						removeScriptTypeAttributes: false,
-						removeStyleLinkTypeAttributes: false
-					}
-				}
-			},
-			icons: {
-				cwd: './',
-				src: MATERIAL_ICONS,
-				dest: '.tmp/scripts/n-google-material-icons-tpls.js',
-				options: {
-					standalone: false,
-					module: 'n.ui.foundation.tpls',
 					htmlmin: {
 						collapseBooleanAttributes: false,
 						collapseWhitespace: false,
@@ -179,7 +158,7 @@ module.exports = function (grunt) {
 		// Concatenate the scripts and the newly generated environment constant
 		concat: {
 			dist: {
-				src: ['.tmp/scripts/n-uib-foundation-tpls.js', '.tmp/scripts/n-google-material-icons-tpls.js'],
+				src: ['.tmp/scripts/n-uib-foundation-tpls.js'],
 				dest: './n-uib-foundation.js'
 			}
 		},
@@ -223,7 +202,6 @@ module.exports = function (grunt) {
 		'postcss:dist',
 		'cssmin',
 		'ngtemplates:foundation',
-		'ngtemplates:icons',
 		'concat',
 		// 'concat:dist',
 		// 'uglify',
