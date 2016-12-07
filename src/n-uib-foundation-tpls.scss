@@ -1,4 +1,4 @@
-@import "../bower_components/foundation-sites/scss/foundation";
+@import "bower_components/foundation-sites/scss/foundation";
 
 @import "accordion/accordion";
 @import "alert/alert";
@@ -20,7 +20,7 @@
 @import "utils/collapse";
 @import "utils/font-awesome";
 
-@import "../bower_components/font-awesome/scss/font-awesome";
+@import "bower_components/font-awesome/scss/font-awesome";
 
 @mixin n-uib-foundation-include-everything {
 	// Accordion
