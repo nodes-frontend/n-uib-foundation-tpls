@@ -1,6 +1,6 @@
 {
   "name": "n-uib-foundation-tpls",
-  "main": "./n-uib-foundation-tpls.js",
+  "main": "./n-uib-foundation.js",
   "homepage": "https://github.com/dennishn/n-uib-foundatoin-tpls",
   "authors": [
     "Dennis Haulund Nielsen <dhni@nodes.dk>"
